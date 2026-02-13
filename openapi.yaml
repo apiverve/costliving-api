@@ -1,0 +1,101 @@
+openapi: 3.0.4
+info:
+  title: Cost of Living
+  description: >-
+    Cost of Living provides cost of living indices for US regions based on major
+    metropolitan area data. Compare the relative cost of living between states,
+    cities, or regions and calculate salary equivalents for relocation
+    decisions.
+  termsOfService: https://apiverve.com/terms/
+  contact:
+    name: APIVerve Support
+    email: hello@apiverve.com
+    url: https://apiverve.com/contact
+  version: 1.0.0
+externalDocs:
+  description: Learn more about APIVerve
+  url: https://docs.apiverve.com?utm_source=openapi
+servers:
+  - url: https://api.apiverve.com/
+paths:
+  /v1/costliving:
+    get:
+      summary: Get Cost of Living
+      description: >-
+        Get cost of living index by location, or compare two locations. Accepts
+        state names (California), state codes (CA), or major city names (Los
+        Angeles).
+      operationId: costliving
+      parameters:
+        - name: location
+          in: query
+          schema:
+            type: string
+          required: false
+          description: >-
+            State name, state code (e.g., CA, NY), or major city name. Omit for
+            all regions ranked.
+          example: California
+        - name: compare
+          in: query
+          schema:
+            type: string
+          required: false
+          description: Second location for salary comparison calculation
+          example: Texas
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: status
+                  error:
+                    type: string
+                    description: error
+                  data:
+                    type: object
+                    description: data
+              example:
+                status: ok
+                error: null
+                data:
+                  from:
+                    searchedLocation: California
+                    region: west-large
+                    regionName: West Large Metros (LA, SF, Seattle, Phoenix, Denver area)
+                    costIndex: 118
+                  to:
+                    searchedLocation: Texas
+                    region: south-large
+                    regionName: >-
+                      South Large Metros (Dallas, Houston, Atlanta, Miami, DC
+                      area)
+                    costIndex: 103
+                  comparison:
+                    costDifference: -12.7
+                    direction: less expensive
+                    salaryEquivalent:
+                      description: >-
+                        A $100,000 salary in California is equivalent to $87,288
+                        in Texas
+                      fromSalary: 100000
+                      equivalentSalary: 87288
+        '401':
+          description: Your request was not authorized, or your API Key was invalid
+        '404':
+          description: Requested resource was not found
+        '500':
+          description: A server error has occurred, try again later
+components:
+  securitySchemes:
+    api_key:
+      type: apiKey
+      name: x-api-key
+      in: header
+security:
+  - api_key: []
