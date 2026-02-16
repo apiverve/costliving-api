@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/costliving",
-  "version": "1.1.13",
+  "version": "1.1.14",
   "description": "Cost of Living provides cost of living indices for US regions based on major metropolitan area data. Compare the relative cost of living between states, cities, or regions and calculate salary equivalents for relocation decisions.",
   "main": "index.js",
   "types": "index.d.ts",
