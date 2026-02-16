@@ -44,7 +44,10 @@ from apiverve_costofliving.apiClient import CostlivingAPIClient
 # Initialize the client with your APIVerve API key
 api = CostlivingAPIClient("[YOUR_API_KEY]")
 
-query = { "location": "California", "compare": "Texas" }
+query = {
+    "location": "California",
+    "compare": "Texas"
+}
 
 try:
     # Make the API call
@@ -82,7 +85,10 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```python
-query = { "location": "California", "compare": "Texas" }
+query = {
+    "location": "California",
+    "compare": "Texas"
+}
 ```
 
 ###### Simple Request
@@ -140,7 +146,10 @@ from apiverve_costofliving.apiClient import CostlivingAPIClient, CostlivingAPICl
 
 api = CostlivingAPIClient("[YOUR_API_KEY]")
 
-query = { "location": "California", "compare": "Texas" }
+query = {
+    "location": "California",
+    "compare": "Texas"
+}
 
 try:
     result = api.execute(query)
@@ -161,7 +170,10 @@ from apiverve_costofliving.apiClient import CostlivingAPIClient, CostlivingAPICl
 
 api = CostlivingAPIClient("[YOUR_API_KEY]")
 
-query = { "location": "California", "compare": "Texas" }
+query = {
+    "location": "California",
+    "compare": "Texas"
+}
 
 try:
     result = api.execute(query)
@@ -195,7 +207,10 @@ The client supports the context manager protocol for automatic resource cleanup:
 ```python
 from apiverve_costofliving.apiClient import CostlivingAPIClient, CostlivingAPIClientError
 
-query = { "location": "California", "compare": "Texas" }
+query = {
+    "location": "California",
+    "compare": "Texas"
+}
 
 # Using context manager ensures proper cleanup
 with CostlivingAPIClient("[YOUR_API_KEY]") as api:
@@ -221,7 +236,10 @@ from apiverve_costofliving.apiClient import CostlivingAPIClient
 # Enable debug mode
 api = CostlivingAPIClient("[YOUR_API_KEY]", debug=True)
 
-query = { "location": "California", "compare": "Texas" }
+query = {
+    "location": "California",
+    "compare": "Texas"
+}
 
 # Debug information will be printed to console
 result = api.execute(query)
@@ -236,8 +254,12 @@ from apiverve_costofliving.apiClient import CostlivingAPIClient
 
 api = CostlivingAPIClient("[YOUR_API_KEY]")
 
+query = {
+    "location": "California",
+    "compare": "Texas"
+}
+
 try:
-    query = { "location": "California", "compare": "Texas" }
     result = api.execute(query)
     print(result)
 finally:
