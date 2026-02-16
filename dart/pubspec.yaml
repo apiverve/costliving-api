@@ -1,0 +1,16 @@
+name: apiverve_costliving
+description: Cost of Living provides cost of living indices for US regions based on major metropolitan area data. Compare the relative cost of living between states, cities, or regions and calculate salary equivalents for relocation decisions.
+version: 1.1.14
+homepage: https://apiverve.com/marketplace/costliving?utm_source=dart&utm_medium=homepage
+repository: https://github.com/apiverve/costliving-api/tree/main/dart
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  http: ^1.1.0
+  http_parser: ^4.0.0
+
+dev_dependencies:
+  lints: ^3.0.0
+  test: ^1.24.0
