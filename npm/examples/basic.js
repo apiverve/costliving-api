@@ -15,8 +15,7 @@ const api = new costlivingAPI({
 
 // Example query
 var query = {
-  location: "California",
-  compare: "Texas"
+  location: "California"
 };
 
 // Make the API request using callback
