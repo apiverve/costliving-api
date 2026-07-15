@@ -22,9 +22,8 @@ paths:
     get:
       summary: Get Cost of Living
       description: >-
-        Get cost of living index by location, or compare two locations. Accepts
-        state names (California), state codes (CA), or major city names (Los
-        Angeles).
+        Get cost of living index for a location. Accepts state names, state
+        codes, or major city names. Omit location to get all regions ranked.
       operationId: costliving
       parameters:
         - name: location
@@ -36,13 +35,6 @@ paths:
             State name, state code (e.g., CA, NY), or major city name. Omit for
             all regions ranked.
           example: California
-        - name: compare
-          in: query
-          schema:
-            type: string
-          required: false
-          description: Second location for salary comparison calculation
-          example: Texas
       responses:
         '200':
           description: Successful Response
