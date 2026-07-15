@@ -4,11 +4,23 @@ declare module '@apiverve/costliving' {
     secure?: boolean;
   }
 
+  /**
+   * Describes fields the current plan does not unlock. Locked fields arrive as null
+   * in `data`; `locked_fields` names them, using dot paths for nested fields.
+   * Absent when the plan unlocks everything.
+   */
+  export interface PremiumInfo {
+    message: string;
+    upgrade_url: string;
+    locked_fields: string[];
+  }
+
   export interface costlivingResponse {
     status: string;
     error: string | null;
     data: CostofLivingData;
     code?: number;
+    premium?: PremiumInfo;
   }
 
 
@@ -19,22 +31,22 @@ declare module '@apiverve/costliving' {
   }
   
   interface Comparison {
-      costDifference:   number;
-      direction:        string;
+      costDifference:   number | null;
+      direction:        null | string;
       salaryEquivalent: SalaryEquivalent;
   }
   
   interface SalaryEquivalent {
-      description:      string;
-      fromSalary:       number;
-      equivalentSalary: number;
+      description:      null | string;
+      fromSalary:       number | null;
+      equivalentSalary: number | null;
   }
   
   interface From {
-      searchedLocation: string;
-      region:           string;
-      regionName:       string;
-      costIndex:        number;
+      searchedLocation: null | string;
+      region:           null | string;
+      regionName:       null | string;
+      costIndex:        number | null;
   }
 
   export default class costlivingWrapper {
