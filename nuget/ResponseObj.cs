@@ -25,6 +25,9 @@ namespace APIVerve.API.CostofLiving
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
@@ -42,7 +45,7 @@ namespace APIVerve.API.CostofLiving
     public partial class Comparison
     {
         [JsonProperty("costDifference")]
-        public double CostDifference { get; set; }
+        public double? CostDifference { get; set; }
 
         [JsonProperty("direction")]
         public string Direction { get; set; }
@@ -57,10 +60,10 @@ namespace APIVerve.API.CostofLiving
         public string Description { get; set; }
 
         [JsonProperty("fromSalary")]
-        public long FromSalary { get; set; }
+        public long? FromSalary { get; set; }
 
         [JsonProperty("equivalentSalary")]
-        public long EquivalentSalary { get; set; }
+        public long? EquivalentSalary { get; set; }
     }
 
     public partial class From
@@ -75,6 +78,18 @@ namespace APIVerve.API.CostofLiving
         public string RegionName { get; set; }
 
         [JsonProperty("costIndex")]
-        public long CostIndex { get; set; }
+        public long? CostIndex { get; set; }
+    }
+
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 }
