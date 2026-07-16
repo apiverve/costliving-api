@@ -191,11 +191,48 @@ x-api-key: YOUR_API_KEY_HERE
 Get your API key: [https://apiverve.com](https://apiverve.com)
 
 ### Response Format
-All responses are JSON with this structure:
+
+Every APIVerve endpoint returns the same envelope — check `status`, then read `data`:
+
 ```json
 {
   "status": "ok",
+  "error": null,
   "data": { ... }
+}
+```
+
+### Example Response
+
+A real response from the Cost of Living API:
+
+```json
+{
+  "status": "ok",
+  "error": null,
+  "data": {
+    "from": {
+      "searchedLocation": "California",
+      "region": "west-large",
+      "regionName": "West Large Metros (LA, SF, Seattle, Phoenix, Denver area)",
+      "costIndex": 118
+    },
+    "to": {
+      "searchedLocation": "Texas",
+      "region": "south-large",
+      "regionName": "South Large Metros (Dallas, Houston, Atlanta, Miami, DC area)",
+      "costIndex": 103
+    },
+    "comparison": {
+      "costDifference": -12.7,
+      "direction": "less expensive",
+      "salaryEquivalent": {
+        "description": "A $100,000 salary in California is equivalent to $87,288 in Texas",
+        "fromSalary": 100000,
+        "equivalentSalary": 87288
+      }
+    }
+  }
 }
 ```
 
