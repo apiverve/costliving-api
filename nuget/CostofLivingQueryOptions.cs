@@ -15,11 +15,5 @@ namespace APIVerve.API.CostofLiving
         /// </summary>
         [JsonProperty("location")]
         public string Location { get; set; }
-
-        /// <summary>
-        /// Second location for salary comparison calculation
-        /// </summary>
-        [JsonProperty("compare")]
-        public string Compare { get; set; }
     }
 }
