@@ -1,7 +1,7 @@
 {
   "name": "@apiverve/costliving",
-  "version": "1.2.0",
-  "description": "Cost of Living provides cost of living indices for US regions based on major metropolitan area data. Compare the relative cost of living between states, cities, or regions and calculate salary equivalents for relocation decisions.",
+  "version": "1.2.2",
+  "description": "Cost of Living is a cost of living API that provides index values for US regions based on major metropolitan area data. Compare the relative cost of living between states or cities, each mapped to its Census region, and calculate salary equivalents for relocation decisions on paid plans.",
   "main": "index.js",
   "types": "index.d.ts",
   "sideEffects": false,
@@ -23,7 +23,7 @@
     "directory": "npm"
   },
   "keywords": [
-    "cost of living", "cost of living index", "city comparison", "state comparison", "living expenses"
+    "cost of living api", "cost of living index api", "cost of living", "cost of living index", "city comparison"
   ],
   "author": {
     "name": "APIVerve",
@@ -34,7 +34,7 @@
   "bugs": {
     "url": "https://github.com/apiverve/costliving-api/issues"
   },
-  "homepage": "https://apiverve.com/marketplace/costliving?utm_source=npm&utm_medium=homepage",
+  "homepage": "https://apiverve.com/marketplace/costliving?utm_source=npm&utm_medium=referral&utm_content=homepage",
   "devDependencies": {
     "mocha": "^11.0.1",
     "chai": "^5.1.2",

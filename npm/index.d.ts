@@ -25,28 +25,15 @@ declare module '@apiverve/costliving' {
 
 
   interface CostofLivingData {
-      from:       From;
-      to:         From;
-      comparison: Comparison;
-  }
-  
-  interface Comparison {
-      costDifference:   number | null;
-      direction:        null | string;
-      salaryEquivalent: SalaryEquivalent;
-  }
-  
-  interface SalaryEquivalent {
-      description:      null | string;
-      fromSalary:       number | null;
-      equivalentSalary: number | null;
-  }
-  
-  interface From {
       searchedLocation: null | string;
       region:           null | string;
       regionName:       null | string;
       costIndex:        number | null;
+      description:      null | string;
+      cpi:              number | null;
+      usAverageCPI:     number | null;
+      period:           null | string;
+      note:             null | string;
   }
 
   export default class costlivingWrapper {
