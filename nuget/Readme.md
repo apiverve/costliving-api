@@ -1,13 +1,12 @@
-CostofLiving API
+Cost of Living API
 ============
 
-Cost of Living provides cost of living indices for US regions based on major metropolitan area data. Compare the relative cost of living between states, cities, or regions and calculate salary equivalents for relocation decisions.
+Cost of Living is a cost of living API that provides index values for US regions based on major metropolitan area data. Compare the relative cost of living between states or cities, each mapped to its Census region, and calculate salary equivalents for relocation decisions on paid plans.
 
-![Build Status](https://img.shields.io/badge/build-passing-green)
-![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
-![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 
-This is a .NET Wrapper for the [CostofLiving API](https://apiverve.com/marketplace/costliving?utm_source=nuget&utm_medium=readme)
+[![NuGet version](https://img.shields.io/nuget/v/APIVerve.API.CostofLiving.svg)](https://www.nuget.org/packages/APIVerve.API.CostofLiving)
+
+This is a .NET wrapper for the [Cost of Living API](https://apiverve.com/marketplace/costliving?utm_source=nuget&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -40,8 +39,8 @@ From within Visual Studio:
 
 ## Configuration
 
-Before using the costliving API client, you have to setup your account and obtain your API Key.
-You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=nuget&utm_medium=readme)
+Before using the Cost of Living API client, you have to setup your account and obtain your API Key.
+You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=nuget&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -61,8 +60,8 @@ class Program
         var apiClient = new CostofLivingAPIClient("[YOUR_API_KEY]");
 
         var queryOptions = new CostofLivingQueryOptions {
-    Location = "California"
-};
+            Location = "California"
+        };
 
         // Make the API call
         try
@@ -92,13 +91,13 @@ class Program
 
 ## Usage
 
-The CostofLiving API documentation is found here: [https://docs.apiverve.com/ref/costliving](https://docs.apiverve.com/ref/costliving?utm_source=nuget&utm_medium=readme).
+The Cost of Living API documentation is found here: [https://docs.apiverve.com/ref/costliving](https://docs.apiverve.com/ref/costliving?utm_source=nuget&utm_medium=referral&utm_content=readme).
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
 
 ###### Authentication
-CostofLiving API uses API Key-based authentication. When you create an instance of the API client, you can pass your API Key as a parameter.
+Cost of Living API uses API Key-based authentication. When you create an instance of the API client, you can pass your API Key as a parameter.
 
 ```csharp
 // Create an instance of the API client
@@ -125,8 +124,8 @@ public class Example
         var apiClient = new CostofLivingAPIClient("[YOUR_API_KEY]");
 
         var queryOptions = new CostofLivingQueryOptions {
-    Location = "California"
-};
+            Location = "California"
+        };
 
         var response = await apiClient.ExecuteAsync(queryOptions);
 
@@ -157,8 +156,8 @@ public class Example
         var apiClient = new CostofLivingAPIClient("[YOUR_API_KEY]");
 
         var queryOptions = new CostofLivingQueryOptions {
-    Location = "California"
-};
+            Location = "California"
+        };
 
         var response = apiClient.Execute(queryOptions);
 
@@ -194,8 +193,8 @@ public class Example
         var apiClient = new CostofLivingAPIClient("[YOUR_API_KEY]");
 
         var queryOptions = new CostofLivingQueryOptions {
-    Location = "California"
-};
+            Location = "California"
+        };
 
         try
         {
@@ -250,8 +249,8 @@ public class Example
         apiClient.SetRetryDelay(2000);     // Wait 2 seconds between retries
 
         var queryOptions = new CostofLivingQueryOptions {
-    Location = "California"
-};
+            Location = "California"
+        };
 
         try
         {
@@ -367,27 +366,15 @@ using (var apiClient = new CostofLivingAPIClient("[YOUR_API_KEY]"))
   "status": "ok",
   "error": null,
   "data": {
-    "from": {
-      "searchedLocation": "California",
-      "region": "west-large",
-      "regionName": "West Large Metros (LA, SF, Seattle, Phoenix, Denver area)",
-      "costIndex": 118
-    },
-    "to": {
-      "searchedLocation": "Texas",
-      "region": "south-large",
-      "regionName": "South Large Metros (Dallas, Houston, Atlanta, Miami, DC area)",
-      "costIndex": 103
-    },
-    "comparison": {
-      "costDifference": -12.7,
-      "direction": "less expensive",
-      "salaryEquivalent": {
-        "description": "A $100,000 salary in California is equivalent to $87,288 in Texas",
-        "fromSalary": 100000,
-        "equivalentSalary": 87288
-      }
-    }
+    "searchedLocation": "California",
+    "region": "west-large",
+    "regionName": "West Large Metros (LA, SF, Seattle, Phoenix, Denver area)",
+    "costIndex": 107,
+    "description": "7% above average",
+    "cpi": 356.993,
+    "usAverageCPI": 334.98,
+    "period": "2026-08",
+    "note": "Cost index is relative to US average (100). Values above 100 indicate higher than average cost of living."
   }
 }
 ```
@@ -396,7 +383,7 @@ using (var apiClient = new CostofLivingAPIClient("[YOUR_API_KEY]"))
 
 ## Customer Support
 
-Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=nuget&utm_medium=readme).
+Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=nuget&utm_medium=referral&utm_content=readme).
 
 ---
 
@@ -407,12 +394,12 @@ Stay up to date by following [@apiverveHQ](https://twitter.com/apiverveHQ) on Tw
 
 ## Legal
 
-All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=nuget&utm_medium=readme) and all legal documents and agreements.
+All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=nuget&utm_medium=referral&utm_content=readme) and all legal documents and agreements.
 
 ---
 
 ## License
-Licensed under the The MIT License (MIT)
+Licensed under the MIT License (MIT)
 
 Copyright (&copy;) 2026 APIVerve, and EvlarSoft LLC
 

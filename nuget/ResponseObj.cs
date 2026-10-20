@@ -32,42 +32,6 @@ namespace APIVerve.API.CostofLiving
 
     public partial class Data
     {
-        [JsonProperty("from")]
-        public From From { get; set; }
-
-        [JsonProperty("to")]
-        public From To { get; set; }
-
-        [JsonProperty("comparison")]
-        public Comparison Comparison { get; set; }
-    }
-
-    public partial class Comparison
-    {
-        [JsonProperty("costDifference")]
-        public double? CostDifference { get; set; }
-
-        [JsonProperty("direction")]
-        public string Direction { get; set; }
-
-        [JsonProperty("salaryEquivalent")]
-        public SalaryEquivalent SalaryEquivalent { get; set; }
-    }
-
-    public partial class SalaryEquivalent
-    {
-        [JsonProperty("description")]
-        public string Description { get; set; }
-
-        [JsonProperty("fromSalary")]
-        public long? FromSalary { get; set; }
-
-        [JsonProperty("equivalentSalary")]
-        public long? EquivalentSalary { get; set; }
-    }
-
-    public partial class From
-    {
         [JsonProperty("searchedLocation")]
         public string SearchedLocation { get; set; }
 
@@ -79,6 +43,21 @@ namespace APIVerve.API.CostofLiving
 
         [JsonProperty("costIndex")]
         public long? CostIndex { get; set; }
+
+        [JsonProperty("description")]
+        public string Description { get; set; }
+
+        [JsonProperty("cpi")]
+        public double? Cpi { get; set; }
+
+        [JsonProperty("usAverageCPI")]
+        public double? UsAverageCpi { get; set; }
+
+        [JsonProperty("period")]
+        public string Period { get; set; }
+
+        [JsonProperty("note")]
+        public string Note { get; set; }
     }
 
     public partial class Premium

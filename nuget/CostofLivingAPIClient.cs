@@ -67,7 +67,7 @@ namespace APIVerve.API.CostofLiving
         /// <summary>Validation rules for parameters</summary>
         private static readonly Dictionary<string, ValidationRule> _validationRules = new Dictionary<string, ValidationRule>
         {
-            { "location", new ValidationRule { Type = "string", Required = false } }
+            { "location", new ValidationRule { Type = "string", Required = true } }
         };
 
         /// <summary>Format validation patterns</summary>
