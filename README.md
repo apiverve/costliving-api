@@ -1,13 +1,13 @@
-# [Cost of Living API](https://apiverve.com/marketplace/costliving?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+# [Cost of Living API](https://apiverve.com/marketplace/costliving?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 
-Cost of Living provides cost of living indices for US regions based on major metropolitan area data. Compare the relative cost of living between states, cities, or regions and calculate salary equivalents for relocation decisions.
+Cost of Living is a cost of living API that provides index values for US regions based on major metropolitan area data. Compare the relative cost of living between states or cities, each mapped to its Census region, and calculate salary equivalents for relocation decisions on paid plans.
 
 The Cost of Living API provides a simple, reliable way to integrate cost of living functionality into your applications. Built for developers who need production-ready cost of living capabilities without the complexity of building from scratch.
 
-**[View API Details →](https://apiverve.com/marketplace/costliving?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)**
+**[View API Details →](https://apiverve.com/marketplace/costliving?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/costliving?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/costliving?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 [![Method](https://img.shields.io/badge/Method-GET-blue.svg)](#)
 [![Platform](https://img.shields.io/badge/Platform-Multi--Platform-orange.svg)](#installation)
 
@@ -161,7 +161,7 @@ go get github.com/apiverve/costliving-api/go
 
 ## Documentation
 
-- 🏠 **API Home:** [Cost of Living API](https://apiverve.com/marketplace/costliving?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home:** [Cost of Living API](https://apiverve.com/marketplace/costliving?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 📚 **API Reference:** [docs.apiverve.com/ref/costliving](https://docs.apiverve.com/ref/costliving)
 - 📖 **OpenAPI Spec:** [openapi.yaml](./openapi.yaml)
 - 💡 **Examples:** [examples/](./examples/)
@@ -211,27 +211,15 @@ A real response from the Cost of Living API:
   "status": "ok",
   "error": null,
   "data": {
-    "from": {
-      "searchedLocation": "California",
-      "region": "west-large",
-      "regionName": "West Large Metros (LA, SF, Seattle, Phoenix, Denver area)",
-      "costIndex": 118
-    },
-    "to": {
-      "searchedLocation": "Texas",
-      "region": "south-large",
-      "regionName": "South Large Metros (Dallas, Houston, Atlanta, Miami, DC area)",
-      "costIndex": 103
-    },
-    "comparison": {
-      "costDifference": -12.7,
-      "direction": "less expensive",
-      "salaryEquivalent": {
-        "description": "A $100,000 salary in California is equivalent to $87,288 in Texas",
-        "fromSalary": 100000,
-        "equivalentSalary": 87288
-      }
-    }
+    "searchedLocation": "California",
+    "region": "west-large",
+    "regionName": "West Large Metros (LA, SF, Seattle, Phoenix, Denver area)",
+    "costIndex": 107,
+    "description": "7% above average",
+    "cpi": 356.993,
+    "usAverageCPI": 334.98,
+    "period": "2026-08",
+    "note": "Cost index is relative to US average (100). Values above 100 indicate higher than average cost of living."
   }
 }
 ```
@@ -240,7 +228,7 @@ A real response from the Cost of Living API:
 
 ## Support & Community
 
-- 🏠 **API Home**: [Cost of Living API](https://apiverve.com/marketplace/costliving?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home**: [Cost of Living API](https://apiverve.com/marketplace/costliving?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 💬 **Support**: [https://apiverve.com/contact](https://apiverve.com/contact)
 - 🐛 **Issues**: [GitHub Issues](../../issues)
 - 📖 **Documentation**: [https://docs.apiverve.com](https://docs.apiverve.com)
