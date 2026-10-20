@@ -1,13 +1,13 @@
 [project]
 name = "apiverve-costofliving"
-version = "1.1.14"
+version = "1.2.2"
 authors = [
   { name="APIVerve", email="hello@apiverve.com" },
 ]
-description = "Cost of Living provides cost of living indices for US regions based on major metropolitan area data. Compare the relative cost of living between states, cities, or regions and calculate salary equivalents for relocation decisions."
-keywords = []
+description = "Cost of Living is a cost of living API that provides index values for US regions based on major metropolitan area data. Compare the relative cost of living between states or cities, each mapped to its Census region, and calculate salary equivalents for relocation decisions on paid plans."
+keywords = ["cost of living api", "cost of living index api", "cost of living", "cost of living index", "city comparison"]
 readme = "README.md"
-requires-python = ">=3.7"
+requires-python = ">=3.9"
 license = {text = "MIT"}
 dependencies = [
     "requests>=2.25.0"
@@ -17,35 +17,13 @@ classifiers = [
     "Programming Language :: Python :: 3",
     "Operating System :: OS Independent",
     "Intended Audience :: Developers",
-    "Intended Audience :: Financial and Insurance Industry",
-    "Intended Audience :: Healthcare Industry",
-    "Intended Audience :: Education",
-    "Intended Audience :: Science/Research",
-    "Intended Audience :: Information Technology",
-    "Topic :: Software Development :: Libraries :: Python Modules",
-    "Topic :: Utilities",
-    "Topic :: Scientific/Engineering",
-    "Topic :: Education",
-    "Topic :: Internet :: WWW/HTTP :: Indexing/Search",
-    "Topic :: Internet :: WWW/HTTP :: Site Management",
     "Topic :: Internet :: WWW/HTTP",
-    "Topic :: Software Development :: Libraries",
-    "Topic :: Software Development :: Libraries :: Application Frameworks",
-    "Topic :: Internet",
-    "Topic :: Communications",
-    "Topic :: Office/Business",
-    "Topic :: Text Processing",
-    "Topic :: Security",
-    "Topic :: Database",
-    "Topic :: Software Development :: Code Generators",
-    "Topic :: Software Development :: Pre-processors",
-    "Topic :: Software Development :: Quality Assurance",
-    "Topic :: Software Development :: Testing",
+    "Topic :: Software Development :: Libraries :: Python Modules",
     "Natural Language :: English",
 ]
 
 [project.urls]
-Homepage = "https://apiverve.com?utm_source=pypi"
+Homepage = "https://apiverve.com/marketplace/costliving?utm_source=pypi&utm_medium=referral&utm_content=homepage"
+Documentation = "https://docs.apiverve.com/ref/costliving?utm_source=pypi&utm_medium=referral&utm_content=docs"
 Repository = "https://github.com/apiverve/costliving-api"
-Documentation = "https://docs.apiverve.com/api/costliving?utm_source=pypi"
 Twitter = "https://twitter.com/apivervehq"

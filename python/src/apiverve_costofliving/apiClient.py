@@ -1,6 +1,6 @@
 import re
-from typing import Dict, Optional, Any
-from dataclasses import dataclass, List
+from typing import Dict, Optional, Any, List
+from dataclasses import dataclass
 import requests
 
 
@@ -24,8 +24,7 @@ class ValidationError(CostlivingAPIClientError):
 class CostlivingAPIClient:
     # Validation rules for parameters (generated from schema)
     VALIDATION_RULES = {
-        "location": {"type": "string", "required": False},
-        "compare": {"type": "string", "required": False}
+        "location": {"type": "string", "required": True}
     }
 
     # Format validation patterns
