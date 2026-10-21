@@ -19,7 +19,7 @@ use APIVerve\Costliving\Exceptions\ValidationException;
  * print_r($response);
  * ```
  *
- * @see https://apiverve.com/marketplace/costliving?utm_source=php&utm_medium=readme
+ * @see https://apiverve.com/marketplace/costliving?utm_source=php&utm_medium=referral&utm_content=readme
  */
 class Client
 {
@@ -34,7 +34,7 @@ class Client
      * Validation rules for parameters
      */
     private const VALIDATION_RULES = [
-        'location' => ['type' => 'string', 'required' => false]
+        'location' => ['type' => 'string', 'required' => true]
     ];
 
     /**

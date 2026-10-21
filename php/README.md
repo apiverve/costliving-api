@@ -1,6 +1,6 @@
 # Cost of Living API - PHP Package
 
-Cost of Living provides cost of living indices for US regions based on major metropolitan area data. Compare the relative cost of living between states, cities, or regions and calculate salary equivalents for relocation decisions.
+Cost of Living is a cost of living API that provides index values for US regions based on major metropolitan area data. Compare the relative cost of living between states or cities, each mapped to its Census region, and calculate salary equivalents for relocation decisions on paid plans.
 
 ## Installation
 
@@ -69,27 +69,15 @@ $client = new Client(
   "status": "ok",
   "error": null,
   "data": {
-    "from": {
-      "searchedLocation": "California",
-      "region": "west-large",
-      "regionName": "West Large Metros (LA, SF, Seattle, Phoenix, Denver area)",
-      "costIndex": 118
-    },
-    "to": {
-      "searchedLocation": "Texas",
-      "region": "south-large",
-      "regionName": "South Large Metros (Dallas, Houston, Atlanta, Miami, DC area)",
-      "costIndex": 103
-    },
-    "comparison": {
-      "costDifference": -12.7,
-      "direction": "less expensive",
-      "salaryEquivalent": {
-        "description": "A $100,000 salary in California is equivalent to $87,288 in Texas",
-        "fromSalary": 100000,
-        "equivalentSalary": 87288
-      }
-    }
+    "searchedLocation": "California",
+    "region": "west-large",
+    "regionName": "West Large Metros (LA, SF, Seattle, Phoenix, Denver area)",
+    "costIndex": 107,
+    "description": "7% above average",
+    "cpi": 356.993,
+    "usAverageCPI": 334.98,
+    "period": "2026-08",
+    "note": "Cost index is relative to US average (100). Values above 100 indicate higher than average cost of living."
   }
 }
 ```
@@ -101,11 +89,11 @@ $client = new Client(
 
 ## Documentation
 
-For more information, visit the [API Documentation](https://docs.apiverve.com/ref/costliving?utm_source=packagist&utm_medium=readme).
+For more information, visit the [API Documentation](https://docs.apiverve.com/ref/costliving?utm_source=packagist&utm_medium=referral&utm_content=readme).
 
 ## Support
 
-- Website: [https://apiverve.com/marketplace/costliving?utm_source=php&utm_medium=readme](https://apiverve.com/marketplace/costliving?utm_source=php&utm_medium=readme)
+- Website: [https://apiverve.com/marketplace/costliving?utm_source=php&utm_medium=referral&utm_content=readme](https://apiverve.com/marketplace/costliving?utm_source=php&utm_medium=referral&utm_content=readme)
 - Email: hello@apiverve.com
 
 ## License
