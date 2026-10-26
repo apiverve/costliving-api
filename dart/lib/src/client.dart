@@ -46,11 +46,10 @@ final _formatPatterns = {
 
 /// Cost of Living API client.
 ///
-/// For more information, visit: https://apiverve.com/marketplace/costliving?utm_source=dart&utm_medium=readme
+/// For more information, visit: https://apiverve.com/marketplace/costliving?utm_source=dart&utm_medium=referral&utm_content=readme
 ///
 /// Parameters:
-/// * [location] - State name, state code (e.g., CA, NY), or major city name. Omit for all regions ranked.
-/// * [compare] - Second location for salary comparison calculation
+/// * [location] (required) - State name, state code (e.g., CA, NY), or major city name.
 class CostlivingClient {
   final String apiKey;
   final String baseUrl;
@@ -58,8 +57,7 @@ class CostlivingClient {
 
   /// Validation rules for parameters.
   static final Map<String, ValidationRule> _validationRules = <String, ValidationRule>{
-    'location': ValidationRule(type: 'string', required: false),
-    'compare': ValidationRule(type: 'string', required: false),
+    'location': ValidationRule(type: 'string', required: true),
   };
 
   CostlivingClient(this.apiKey, {

@@ -1,11 +1,11 @@
 # Cost of Living API - Dart/Flutter Client
 
-Cost of Living provides cost of living indices for US regions based on major metropolitan area data. Compare the relative cost of living between states, cities, or regions and calculate salary equivalents for relocation decisions.
+Cost of Living is a cost of living API that provides index values for US regions based on major metropolitan area data. Compare the relative cost of living between states or cities, each mapped to its Census region, and calculate salary equivalents for relocation decisions on paid plans.
 
 [![pub package](https://img.shields.io/pub/v/apiverve_costliving.svg)](https://pub.dev/packages/apiverve_costliving)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-This is the Dart/Flutter client for the [Cost of Living API](https://apiverve.com/marketplace/costliving?utm_source=dart&utm_medium=readme).
+This is the Dart/Flutter client for the [Cost of Living API](https://apiverve.com/marketplace/costliving?utm_source=dart&utm_medium=referral&utm_content=readme).
 
 ## Installation
 
@@ -13,7 +13,7 @@ Add this to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  apiverve_costliving: ^1.1.14
+  apiverve_costliving: ^1.2.3
 ```
 
 Then run:
@@ -34,8 +34,7 @@ void main() async {
 
   try {
     final response = await client.execute({
-      'location': 'California',
-      'compare': 'Texas'
+      'location': 'California'
     });
 
     print('Status: ${response.status}');
@@ -53,39 +52,27 @@ void main() async {
   "status": "ok",
   "error": null,
   "data": {
-    "from": {
-      "searchedLocation": "California",
-      "region": "west-large",
-      "regionName": "West Large Metros (LA, SF, Seattle, Phoenix, Denver area)",
-      "costIndex": 118
-    },
-    "to": {
-      "searchedLocation": "Texas",
-      "region": "south-large",
-      "regionName": "South Large Metros (Dallas, Houston, Atlanta, Miami, DC area)",
-      "costIndex": 103
-    },
-    "comparison": {
-      "costDifference": -12.7,
-      "direction": "less expensive",
-      "salaryEquivalent": {
-        "description": "A $100,000 salary in California is equivalent to $87,288 in Texas",
-        "fromSalary": 100000,
-        "equivalentSalary": 87288
-      }
-    }
+    "searchedLocation": "California",
+    "region": "west-large",
+    "regionName": "West Large Metros (LA, SF, Seattle, Phoenix, Denver area)",
+    "costIndex": 107,
+    "description": "7% above average",
+    "cpi": 356.993,
+    "usAverageCPI": 334.98,
+    "period": "2026-08",
+    "note": "Cost index is relative to US average (100). Values above 100 indicate higher than average cost of living."
   }
 }
 ```
 
 ## API Reference
 
-- **API Home:** [Cost of Living API](https://apiverve.com/marketplace/costliving?utm_source=dart&utm_medium=readme)
-- **Documentation:** [docs.apiverve.com/ref/costliving](https://docs.apiverve.com/ref/costliving?utm_source=dart&utm_medium=readme)
+- **API Home:** [Cost of Living API](https://apiverve.com/marketplace/costliving?utm_source=dart&utm_medium=referral&utm_content=readme)
+- **Documentation:** [docs.apiverve.com/ref/costliving](https://docs.apiverve.com/ref/costliving?utm_source=dart&utm_medium=referral&utm_content=readme)
 
 ## Authentication
 
-All requests require an API key. Get yours at [apiverve.com](https://apiverve.com?utm_source=dart&utm_medium=readme).
+All requests require an API key. Get yours at [apiverve.com](https://apiverve.com?utm_source=dart&utm_medium=referral&utm_content=readme).
 
 ## License
 
@@ -93,4 +80,4 @@ MIT License - see [LICENSE](LICENSE) for details.
 
 ---
 
-Built with Dart for [APIVerve](https://apiverve.com?utm_source=dart&utm_medium=readme)
+Built with Dart for [APIVerve](https://apiverve.com?utm_source=dart&utm_medium=referral&utm_content=readme)
