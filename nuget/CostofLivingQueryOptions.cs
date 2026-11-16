@@ -11,7 +11,7 @@ namespace APIVerve.API.CostofLiving
     public class CostofLivingQueryOptions
     {
         /// <summary>
-        /// State name, state code (e.g., CA, NY), or major city name.
+        /// State name, state code (e.g., CA, NY), or city name (e.g., Chicago, or Portland, ME).
         /// </summary>
         [JsonProperty("location")]
         public string Location { get; set; }
