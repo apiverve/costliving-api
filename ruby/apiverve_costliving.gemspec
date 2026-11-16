@@ -2,12 +2,12 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "apiverve_costliving"
-  spec.version       = "1.2.5"
+  spec.version       = "1.2.6"
   spec.authors       = ["APIVerve"]
   spec.email         = ["hello@apiverve.com"]
 
   spec.summary       = "Cost of Living API - Ruby Client"
-  spec.description   = "Cost of Living is a cost of living API that provides index values for US regions based on major metropolitan area data. Compare the relative cost of living between states or cities, each mapped to its Census region, and calculate salary equivalents for relocation decisions on paid plans."
+  spec.description   = "Cost of Living is a cost of living API that returns price-level indices for US states and metropolitan areas, with the US average at 100. Compare the relative cost of living between two states or cities and calculate salary equivalents for relocation decisions on paid plans."
   spec.homepage      = "https://apiverve.com/marketplace/costliving?utm_source=ruby&utm_medium=referral&utm_content=homepage"
   spec.license       = "MIT"
   spec.required_ruby_version = ">= 2.7.0"

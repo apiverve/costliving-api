@@ -1,6 +1,6 @@
 # Cost of Living API - Ruby Gem
 
-Cost of Living is a cost of living API that provides index values for US regions based on major metropolitan area data. Compare the relative cost of living between states or cities, each mapped to its Census region, and calculate salary equivalents for relocation decisions on paid plans.
+Cost of Living is a cost of living API that returns price-level indices for US states and metropolitan areas, with the US average at 100. Compare the relative cost of living between two states or cities and calculate salary equivalents for relocation decisions on paid plans.
 
 ## Installation
 
