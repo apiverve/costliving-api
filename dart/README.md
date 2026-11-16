@@ -1,6 +1,6 @@
 # Cost of Living API - Dart/Flutter Client
 
-Cost of Living is a cost of living API that provides index values for US regions based on major metropolitan area data. Compare the relative cost of living between states or cities, each mapped to its Census region, and calculate salary equivalents for relocation decisions on paid plans.
+Cost of Living is a cost of living API that returns price-level indices for US states and metropolitan areas, with the US average at 100. Compare the relative cost of living between two states or cities and calculate salary equivalents for relocation decisions on paid plans.
 
 [![pub package](https://img.shields.io/pub/v/apiverve_costliving.svg)](https://pub.dev/packages/apiverve_costliving)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -13,7 +13,7 @@ Add this to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  apiverve_costliving: ^1.2.5
+  apiverve_costliving: ^1.2.6
 ```
 
 Then run:

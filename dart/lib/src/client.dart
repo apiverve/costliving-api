@@ -49,7 +49,7 @@ final _formatPatterns = {
 /// For more information, visit: https://apiverve.com/marketplace/costliving?utm_source=dart&utm_medium=referral&utm_content=readme
 ///
 /// Parameters:
-/// * [location] (required) - State name, state code (e.g., CA, NY), or major city name.
+/// * [location] (required) - State name, state code (e.g., CA, NY), or city name (e.g., Chicago, or Portland, ME).
 class CostlivingClient {
   final String apiKey;
   final String baseUrl;
