@@ -1,6 +1,6 @@
 # [Cost of Living API](https://apiverve.com/marketplace/costliving?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 
-Cost of Living is a cost of living API that provides index values for US regions based on major metropolitan area data. Compare the relative cost of living between states or cities, each mapped to its Census region, and calculate salary equivalents for relocation decisions on paid plans.
+Cost of Living is a cost of living API that returns price-level indices for US states and metropolitan areas, with the US average at 100. Compare the relative cost of living between two states or cities and calculate salary equivalents for relocation decisions on paid plans.
 
 The Cost of Living API provides a simple, reliable way to integrate cost of living functionality into your applications. Built for developers who need production-ready cost of living capabilities without the complexity of building from scratch.
 

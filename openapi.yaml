@@ -2,10 +2,10 @@ openapi: 3.0.4
 info:
   title: Cost of Living
   description: >-
-    Cost of Living is a cost of living API that provides index values for US
-    regions based on major metropolitan area data. Compare the relative cost of
-    living between states or cities, each mapped to its Census region, and
-    calculate salary equivalents for relocation decisions on paid plans.
+    Cost of Living is a cost of living API that returns price-level indices for
+    US states and metropolitan areas, with the US average at 100. Compare the
+    relative cost of living between two states or cities and calculate salary
+    equivalents for relocation decisions on paid plans.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
@@ -23,7 +23,7 @@ paths:
       summary: Cost of Living
       description: >-
         Get the cost of living index for a specific location. Accepts state
-        names, state codes, or major city names.
+        names, state codes, or city names, which resolve to their metro area.
       operationId: costliving
       parameters:
         - name: location
@@ -31,7 +31,9 @@ paths:
           schema:
             type: string
           required: true
-          description: State name, state code (e.g., CA, NY), or major city name.
+          description: >-
+            State name, state code (e.g., CA, NY), or city name (e.g., Chicago,
+            or Portland, ME).
           example: California
       responses:
         '200':
